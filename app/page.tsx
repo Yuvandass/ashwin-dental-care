@@ -43,36 +43,36 @@ export default function DentalWebsite() {
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link
+            <a
               href="#services"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
             >
               Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="#gallery"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
             >
               Gallery
-            </Link>
-            <Link
+            </a>
+            <a
               href="#about"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
             >
               About
-            </Link>
-            <Link
+            </a>
+            <a
               href="#testimonials"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
             >
               Reviews
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
             >
               Contact
-            </Link>
+            </a>
           </nav>
 
           <div className="flex items-center space-x-2 md:space-x-4">
@@ -600,7 +600,7 @@ export default function DentalWebsite() {
           id="contact"
           className="py-20 bg-gradient-to-br from-[#206365] to-[#1a5557] text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4JnLzIwMDAvc3ZnIj4ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
 
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
