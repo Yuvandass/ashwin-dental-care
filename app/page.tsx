@@ -31,18 +31,18 @@ export default function DentalWebsite() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-[#206365]/10 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-20 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center space-x-3 animate-fade-in">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#206365] to-[#2a7a7d] shadow-lg">
-              <Smile className="h-7 w-7 text-white" />
+        <div className="container flex h-16 md:h-20 items-center justify-between px-4 md:px-6">
+          <div className="flex items-center space-x-2 md:space-x-3 animate-fade-in">
+            <div className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#206365] to-[#2a7a7d] shadow-lg">
+              <Smile className="h-4 w-4 md:h-7 md:w-7 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-[#206365]">Bright Smile Dental</h1>
-              <p className="text-xs text-gray-600">Your Trusted Dental Care</p>
+              <h1 className="text-sm md:text-xl font-bold text-[#206365]">Bright Smile Dental</h1>
+              <p className="text-xs text-gray-600 hidden md:block">Your Trusted Dental Care</p>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <Link
               href="#services"
               className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
@@ -75,13 +75,13 @@ export default function DentalWebsite() {
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4">
-            <div className="hidden lg:flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="hidden xl:flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-[#206365]" />
               <span className="font-medium">(555) 123-SMILE</span>
             </div>
-            <Button className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] transform hover:scale-105 transition-all duration-300 shadow-lg">
-              Book Appointment
+            <Button className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] transform hover:scale-105 transition-all duration-300 shadow-lg text-xs md:text-sm px-3 md:px-4 py-2">
+              Book Now
             </Button>
           </div>
         </div>
@@ -97,15 +97,15 @@ export default function DentalWebsite() {
           </div>
 
           <div className="container px-4 md:px-6 relative">
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div className="animate-fade-in-up">
+            <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
+              <div className="animate-fade-in-up text-center lg:text-left">
                 <Badge
                   variant="secondary"
-                  className="mb-6 bg-[#206365]/10 text-[#206365] border-[#206365]/20 animate-bounce"
+                  className="mb-4 md:mb-6 bg-[#206365]/10 text-[#206365] border-[#206365]/20 animate-bounce text-xs md:text-sm"
                 >
                   ✨ Now Accepting New Patients
                 </Badge>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-[#206365] animate-fade-in-up delay-200">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-[#206365] animate-fade-in-up delay-200">
                   Your Perfect
                   <span className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] bg-clip-text text-transparent">
                     {" "}
@@ -113,28 +113,28 @@ export default function DentalWebsite() {
                   </span>{" "}
                   Starts Here
                 </h1>
-                <p className="mt-6 text-lg text-gray-600 max-w-xl animate-fade-in-up delay-400">
+                <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 animate-fade-in-up delay-400">
                   Experience gentle, comprehensive dental care in a comfortable environment. Our experienced team is
                   dedicated to helping you achieve optimal oral health and a confident smile.
                 </p>
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
+                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up delay-600 justify-center lg:justify-start">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 shadow-xl"
+                    className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transform hover:scale-105 transition-all duration-300 shadow-xl"
                   >
-                    <Calendar className="mr-2 h-5 w-5" />
+                    <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Schedule Consultation
                   </Button>
                   <Button
                     variant="outline"
                     size="lg"
-                    className="text-lg px-8 py-6 border-[#206365] text-[#206365] hover:bg-[#206365]/5 transform hover:scale-105 transition-all duration-300"
+                    className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 border-[#206365] text-[#206365] hover:bg-[#206365]/5 transform hover:scale-105 transition-all duration-300"
                   >
-                    <Play className="mr-2 h-5 w-5" />
+                    <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Watch Our Story
                   </Button>
                 </div>
-                <div className="mt-6 flex items-center space-x-6 text-sm text-gray-600 animate-fade-in-up delay-800">
+                <div className="mt-4 md:mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600 animate-fade-in-up delay-800">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#206365] mr-2" />
                     Same-day appointments
@@ -239,7 +239,7 @@ export default function DentalWebsite() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   icon: Smile,
@@ -327,7 +327,7 @@ export default function DentalWebsite() {
               <p className="text-lg text-gray-600">See the amazing transformations we've achieved for our patients</p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   title: "Smile Makeover",
@@ -536,7 +536,7 @@ export default function DentalWebsite() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
               {[
                 {
                   name: "Emily Chen",
@@ -600,10 +600,10 @@ export default function DentalWebsite() {
           id="contact"
           className="py-20 bg-gradient-to-br from-[#206365] to-[#1a5557] text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
 
           <div className="container px-4 md:px-6 relative">
-            <div className="grid gap-12 lg:grid-cols-2">
+            <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
               <div className="animate-fade-in-left">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Ready to Schedule Your Visit?</h2>
                 <p className="text-lg text-[#206365]/20 mb-8">
@@ -650,7 +650,7 @@ export default function DentalWebsite() {
                       <input
                         type="text"
                         id="firstName"
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                        className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
                         placeholder="Enter your first name"
                         required
                       />
@@ -662,7 +662,7 @@ export default function DentalWebsite() {
                       <input
                         type="text"
                         id="lastName"
-                        className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                        className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
                         placeholder="Enter your last name"
                         required
                       />
@@ -676,7 +676,7 @@ export default function DentalWebsite() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
                       placeholder="Enter your email"
                       required
                     />
@@ -689,7 +689,7 @@ export default function DentalWebsite() {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
                       placeholder="Enter your phone number"
                       required
                     />
@@ -701,7 +701,7 @@ export default function DentalWebsite() {
                     </label>
                     <select
                       id="service"
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white text-sm md:text-base"
                     >
                       <option value="" className="text-gray-900">
                         Select a service
@@ -731,7 +731,7 @@ export default function DentalWebsite() {
                     <textarea
                       id="message"
                       rows={3}
-                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
                       placeholder="Tell us about your needs..."
                     ></textarea>
                   </div>
