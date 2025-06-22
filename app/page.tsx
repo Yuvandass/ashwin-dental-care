@@ -134,7 +134,7 @@ export default function DentalWebsite() {
                 <div className="relative">
                   <div className="glass-surface p-8 rounded-3xl">
                     <Image
-                      src="/placeholder.svg?height=600&width=500"
+                      src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=500&h=600&fit=crop&crop=center"
                       alt="Modern dental office"
                       width={500}
                       height={600}
@@ -166,7 +166,7 @@ export default function DentalWebsite() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up delay-1000">
               <div className="relative group">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=200&h=200&fit=crop&crop=center"
                   alt="Dental equipment"
                   width={200}
                   height={200}
@@ -176,7 +176,7 @@ export default function DentalWebsite() {
               </div>
               <div className="relative group">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=200&fit=crop&crop=center"
                   alt="Comfortable waiting area"
                   width={200}
                   height={200}
@@ -186,7 +186,7 @@ export default function DentalWebsite() {
               </div>
               <div className="relative group">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=200&h=200&fit=crop&crop=center"
                   alt="Treatment room"
                   width={200}
                   height={200}
@@ -196,7 +196,7 @@ export default function DentalWebsite() {
               </div>
               <div className="relative group">
                 <Image
-                  src="/placeholder.svg?height=200&width=200"
+                  src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=200&h=200&fit=crop&crop=center"
                   alt="Sterilization area"
                   width={200}
                   height={200}
@@ -324,43 +324,55 @@ export default function DentalWebsite() {
                   title: "Smile Makeover",
                   description: "Complete smile transformation with porcelain veneers",
                   category: "Cosmetic",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   title: "Teeth Whitening",
                   description: "Professional whitening treatment for brighter smile",
                   category: "Cosmetic",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   title: "Dental Implants",
                   description: "Single tooth replacement with natural-looking results",
                   category: "Restorative",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   title: "Orthodontic Treatment",
                   description: "Straightening treatment with clear aligners",
                   category: "Orthodontics",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   title: "Crown Restoration",
                   description: "Damaged tooth restored with ceramic crown",
                   category: "Restorative",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=300&fit=crop&crop=center",
                 },
                 {
                   title: "Gum Treatment",
                   description: "Periodontal therapy for healthier gums",
                   category: "Periodontics",
-                  beforeImage: "/placeholder.svg?height=300&width=400",
-                  afterImage: "/placeholder.svg?height=300&width=400",
+                  beforeImage:
+                    "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&crop=center",
+                  afterImage:
+                    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop&crop=center",
                 },
               ].map((item, index) => (
                 <Card
@@ -483,7 +495,7 @@ export default function DentalWebsite() {
               <div className="relative animate-fade-in-right">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=500&width=400"
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop&crop=center"
                     alt="Dr. Sarah Johnson"
                     width={400}
                     height={500}
@@ -501,14 +513,14 @@ export default function DentalWebsite() {
                 {/* Additional doctor/staff photos */}
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <Image
-                    src="/placeholder.svg?height=150&width=200"
+                    src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=200&h=150&fit=crop&crop=center"
                     alt="Dental team"
                     width={200}
                     height={150}
                     className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
                   />
                   <Image
-                    src="/placeholder.svg?height=150&width=200"
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=150&fit=crop&crop=center"
                     alt="Office consultation"
                     width={200}
                     height={150}
@@ -540,7 +552,7 @@ export default function DentalWebsite() {
                 {
                   name: "Emily Chen",
                   role: "Patient since 2020",
-                  image: "/placeholder.svg?height=60&width=60",
+                  image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=center",
                   rating: 5,
                   text: "Dr. Johnson and her team made my dental anxiety disappear. The office is so comfortable and modern. I actually look forward to my appointments now!",
                   bgColor: "bg-blue-50/80",
@@ -548,7 +560,7 @@ export default function DentalWebsite() {
                 {
                   name: "Michael Rodriguez",
                   role: "Patient since 2019",
-                  image: "/placeholder.svg?height=60&width=60",
+                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=center",
                   rating: 5,
                   text: "The best dental experience I've ever had! The staff is incredibly friendly and professional. My smile makeover exceeded all my expectations.",
                   bgColor: "bg-green-50/80",
@@ -556,7 +568,7 @@ export default function DentalWebsite() {
                 {
                   name: "Lisa Thompson",
                   role: "Patient since 2018",
-                  image: "/placeholder.svg?height=60&width=60",
+                  image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=center",
                   rating: 5,
                   text: "My kids love coming here! Dr. Johnson is amazing with children, and the office has such a welcoming atmosphere. Highly recommend to all families.",
                   bgColor: "bg-purple-50/80",
