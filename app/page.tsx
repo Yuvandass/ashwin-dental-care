@@ -32,62 +32,42 @@ export default function DentalWebsite() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-[#206365]/10 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
+      <header className="sticky top-0 z-50 w-full glass-header">
         <div className="container flex h-16 md:h-20 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center space-x-2 md:space-x-3 animate-fade-in">
-            <div className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-500 shadow-lg">
+          <div className="flex items-center space-x-2 md:space-x-3 animate-liquid-float">
+            <div className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-lg animate-liquid-pulse">
               <Smile className="h-4 w-4 md:h-7 md:w-7 text-white" />
             </div>
             <div>
-              <h1 className="text-sm md:text-xl font-bold text-blue-600">Bright Smile Dental</h1>
+              <h1 className="text-sm md:text-xl font-semibold text-gray-900">Bright Smile Dental</h1>
               <p className="text-xs text-gray-600 hidden md:block">Your Trusted Dental Care</p>
             </div>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            <a
-              href="#services"
-              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              Services
-            </a>
-            <a
-              href="#gallery"
-              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              Gallery
-            </a>
-            <a
-              href="#about"
-              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              About
-            </a>
-            <a
-              href="#testimonials"
-              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              Reviews
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
-            >
-              Contact
-            </a>
+            {["Services", "Gallery", "About", "Reviews", "Contact"].map((item, index) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105 relative group"
+              >
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 group-hover:w-full transition-all duration-300 rounded-full"></span>
+              </a>
+            ))}
           </nav>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            <div className="hidden xl:flex items-center space-x-2 text-sm">
+            <div className="hidden xl:flex items-center space-x-2 text-sm glass-card px-3 py-2 rounded-xl">
               <Phone className="h-4 w-4 text-blue-600" />
-              <span className="font-medium">(555) 123-SMILE</span>
+              <span className="font-medium text-gray-700">(555) 123-SMILE</span>
             </div>
-            <Button
-              className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-xs md:text-sm px-3 md:px-4 py-2"
+            <button
+              className="glass-primary text-white text-xs md:text-sm px-4 md:px-6 py-2 md:py-3 rounded-2xl font-medium"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Book Now
-            </Button>
+            </button>
           </div>
         </div>
       </header>
@@ -95,86 +75,75 @@ export default function DentalWebsite() {
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-32 overflow-hidden">
-          {/* Animated background elements */}
+          {/* Organic background blobs */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute -top-40 -right-40 w-96 h-96 organic-blob animate-liquid-float"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 organic-blob-2 animate-liquid-pulse"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-liquid-wave"></div>
           </div>
 
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
               <div className="animate-fade-in-up text-center lg:text-left">
-                <Badge
-                  variant="secondary"
-                  className="mb-4 md:mb-6 bg-blue-600/10 text-blue-600 border-blue-600/20 animate-bounce text-xs md:text-sm"
-                >
-                  ✨ Now Accepting New Patients
-                </Badge>
-                <h1
-                  className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-blue-600 animate-fade-in-up delay-200 cursor-pointer hover:scale-105 transition-all duration-300"
-                  onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                >
+                <div className="glass-card inline-flex items-center px-4 py-2 rounded-full mb-6 animate-liquid-shimmer">
+                  <Sparkles className="h-4 w-4 text-blue-600 mr-2" />
+                  <span className="text-sm font-medium text-gray-700">Now Accepting New Patients</span>
+                </div>
+
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 mb-6 cursor-pointer hover:scale-105 transition-all duration-500">
                   Your Perfect
-                  <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent animate-liquid-shimmer">
                     {" "}
                     Smile
                   </span>{" "}
                   Starts Here
                 </h1>
-                <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 animate-fade-in-up delay-400">
+
+                <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
                   Experience gentle, comprehensive dental care in a comfortable environment. Our experienced team is
                   dedicated to helping you achieve optimal oral health and a confident smile.
                 </p>
-                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up delay-600 justify-center lg:justify-start">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transform hover:scale-105 transition-all duration-300 shadow-xl"
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
+                  <button
+                    className="glass-primary text-white text-base md:text-lg px-8 py-4 rounded-2xl font-semibold flex items-center justify-center"
                     onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   >
-                    <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                    <Calendar className="mr-2 h-5 w-5" />
                     Schedule Consultation
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 border-blue-600 text-blue-600 hover:bg-blue-600/5 transform hover:scale-105 transition-all duration-300"
-                  >
-                    <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                  </button>
+                  <button className="glass-button text-gray-700 text-base md:text-lg px-8 py-4 rounded-2xl font-semibold flex items-center justify-center">
+                    <Play className="mr-2 h-5 w-5" />
                     Watch Our Story
-                  </Button>
+                  </button>
                 </div>
-                <div className="mt-4 md:mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600 animate-fade-in-up delay-800">
-                  <div className="flex items-center">
+
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
+                  <div className="flex items-center glass-card px-3 py-2 rounded-xl">
                     <CheckCircle className="h-4 w-4 text-blue-600 mr-2" />
                     Same-day appointments
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center glass-card px-3 py-2 rounded-xl">
                     <CheckCircle className="h-4 w-4 text-blue-600 mr-2" />
                     Insurance accepted
                   </div>
-                </div>
-                <div className="mt-4 text-center lg:text-left">
-                  <button
-                    onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                    className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center justify-center lg:justify-start transition-all duration-300 hover:scale-105"
-                  >
-                    Learn More About Our Services
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
                 </div>
               </div>
 
               <div className="relative animate-fade-in-right">
                 <div className="relative">
-                  <Image
-                    src="/placeholder.svg?height=600&width=500"
-                    alt="Modern dental office"
-                    width={500}
-                    height={600}
-                    className="rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
-                  />
-                  {/* Glassmorphism overlay card */}
-                  <div className="absolute -bottom-6 -left-6 bg-white/20 backdrop-blur-md p-6 rounded-xl shadow-lg border border-white/30 animate-float">
+                  <div className="glass-surface p-8 rounded-3xl">
+                    <Image
+                      src="/placeholder.svg?height=600&width=500"
+                      alt="Modern dental office"
+                      width={500}
+                      height={600}
+                      className="rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
+                    />
+                  </div>
+
+                  {/* Floating glass card */}
+                  <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl animate-liquid-float">
                     <div className="flex items-center space-x-3">
                       <div className="flex">
                         {[...Array(5)].map((_, i) => (
@@ -182,15 +151,11 @@ export default function DentalWebsite() {
                         ))}
                       </div>
                       <div>
-                        <p className="font-semibold text-sm text-blue-600">4.9/5 Rating</p>
+                        <p className="font-semibold text-sm text-gray-900">4.9/5 Rating</p>
                         <p className="text-xs text-gray-600">500+ Happy Patients</p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Floating elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-600/20 rounded-full animate-ping"></div>
-                  <div className="absolute top-1/4 -left-8 w-6 h-6 bg-blue-600/30 rounded-full animate-bounce delay-500"></div>
                 </div>
               </div>
             </div>
@@ -244,7 +209,7 @@ export default function DentalWebsite() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <section id="services" className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDYzNjUiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
 
           <div className="container px-4 md:px-6 relative">
@@ -307,7 +272,7 @@ export default function DentalWebsite() {
               ].map((service, index) => (
                 <Card
                   key={index}
-                  className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white/70 backdrop-blur-sm border-white/20 animate-fade-in-up"
+                  className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 glass-card animate-fade-in-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader>
@@ -338,7 +303,7 @@ export default function DentalWebsite() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-20 bg-gradient-to-br from-blue-600/5 to-white">
+        <section id="gallery" className="py-20 relative">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
               <div className="flex items-center justify-center mb-4">
@@ -400,7 +365,7 @@ export default function DentalWebsite() {
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="group overflow-hidden bg-white/80 backdrop-blur-md border-white/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
+                  className="group overflow-hidden glass-card hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="relative">
@@ -449,7 +414,7 @@ export default function DentalWebsite() {
             </div>
 
             <div className="text-center mt-12 animate-fade-in-up delay-1000">
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <Button className="glass-primary text-white hover:from-blue-700 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                 View Full Gallery
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -458,7 +423,7 @@ export default function DentalWebsite() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <section id="about" className="py-20 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-20 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl animate-pulse"></div>
             <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-600/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
@@ -479,7 +444,7 @@ export default function DentalWebsite() {
                   Medicine and continues to stay current with the latest advances in dental technology and techniques.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2 mb-8">
-                  <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-white/30 hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center space-x-3 p-4 glass-card hover:shadow-lg transition-all duration-300">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600/10">
                       <Award className="h-6 w-6 text-blue-600" />
                     </div>
@@ -488,7 +453,7 @@ export default function DentalWebsite() {
                       <p className="text-sm text-gray-600">Experience</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-white/30 hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center space-x-3 p-4 glass-card hover:shadow-lg transition-all duration-300">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                       <Users className="h-6 w-6 text-green-600" />
                     </div>
@@ -525,7 +490,7 @@ export default function DentalWebsite() {
                     className="rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500"
                   />
                   {/* Glassmorphism card overlay */}
-                  <div className="absolute -bottom-6 -right-6 bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/30 animate-float">
+                  <div className="absolute -bottom-6 -right-6 glass-card p-4 rounded-xl animate-float">
                     <div className="text-center">
                       <p className="font-bold text-2xl text-blue-600">4.9★</p>
                       <p className="text-xs text-gray-600">Patient Rating</p>
@@ -556,7 +521,7 @@ export default function DentalWebsite() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-20 bg-gradient-to-br from-blue-600/5 to-white">
+        <section id="testimonials" className="py-20 relative">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
               <h2
@@ -599,7 +564,7 @@ export default function DentalWebsite() {
               ].map((testimonial, index) => (
                 <Card
                   key={index}
-                  className={`${testimonial.bgColor} backdrop-blur-md border-white/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up`}
+                  className={`${testimonial.bgColor} glass-card hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up`}
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <CardContent className="pt-6">
@@ -630,10 +595,7 @@ export default function DentalWebsite() {
         </section>
 
         {/* Contact Section */}
-        <section
-          id="contact"
-          className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white relative overflow-hidden"
-        >
+        <section id="contact" className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
 
           <div className="container px-4 md:px-6 relative">
@@ -661,7 +623,7 @@ export default function DentalWebsite() {
                       className="flex items-start space-x-4 animate-fade-in-up"
                       style={{ animationDelay: `${index * 200}ms` }}
                     >
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg glass-card">
                         <item.icon className="h-6 w-6" />
                       </div>
                       <div>
@@ -673,7 +635,7 @@ export default function DentalWebsite() {
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 animate-fade-in-right">
+              <div className="glass-card rounded-2xl p-8 animate-fade-in-right">
                 <h3 className="text-2xl font-bold mb-6">Schedule Your Appointment</h3>
                 <form className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -684,7 +646,7 @@ export default function DentalWebsite() {
                       <input
                         type="text"
                         id="firstName"
-                        className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
+                        className="glass-input"
                         placeholder="Enter your first name"
                         required
                       />
@@ -696,7 +658,7 @@ export default function DentalWebsite() {
                       <input
                         type="text"
                         id="lastName"
-                        className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
+                        className="glass-input"
                         placeholder="Enter your last name"
                         required
                       />
@@ -707,13 +669,7 @@ export default function DentalWebsite() {
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
-                      placeholder="Enter your email"
-                      required
-                    />
+                    <input type="email" id="email" className="glass-input" placeholder="Enter your email" required />
                   </div>
 
                   <div>
@@ -723,7 +679,7 @@ export default function DentalWebsite() {
                     <input
                       type="tel"
                       id="phone"
-                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
+                      className="glass-input"
                       placeholder="Enter your phone number"
                       required
                     />
@@ -733,10 +689,7 @@ export default function DentalWebsite() {
                     <label htmlFor="service" className="block text-sm font-medium mb-2">
                       Service Needed
                     </label>
-                    <select
-                      id="service"
-                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white text-sm md:text-base"
-                    >
+                    <select id="service" className="glass-input">
                       <option value="" className="text-gray-900">
                         Select a service
                       </option>
@@ -765,12 +718,12 @@ export default function DentalWebsite() {
                     <textarea
                       id="message"
                       rows={3}
-                      className="w-full px-3 md:px-4 py-2 md:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 text-sm md:text-base"
+                      className="glass-input"
                       placeholder="Tell us about your needs..."
                     ></textarea>
                   </div>
 
-                  <Button className="w-full bg-white text-blue-600 hover:bg-gray-100 text-lg py-4 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <Button className="glass-primary w-full text-blue-600 hover:bg-gray-100 text-lg py-4 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     Schedule Appointment
                     <Calendar className="ml-2 h-5 w-5" />
                   </Button>
