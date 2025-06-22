@@ -35,11 +35,11 @@ export default function DentalWebsite() {
       <header className="sticky top-0 z-50 w-full border-b border-[#206365]/10 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
         <div className="container flex h-16 md:h-20 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2 md:space-x-3 animate-fade-in">
-            <div className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#206365] to-[#2a7a7d] shadow-lg">
+            <div className="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-500 shadow-lg">
               <Smile className="h-4 w-4 md:h-7 md:w-7 text-white" />
             </div>
             <div>
-              <h1 className="text-sm md:text-xl font-bold text-[#206365]">Bright Smile Dental</h1>
+              <h1 className="text-sm md:text-xl font-bold text-blue-600">Bright Smile Dental</h1>
               <p className="text-xs text-gray-600 hidden md:block">Your Trusted Dental Care</p>
             </div>
           </div>
@@ -47,31 +47,31 @@ export default function DentalWebsite() {
           <nav className="hidden lg:flex items-center space-x-8">
             <a
               href="#services"
-              className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
+              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
             >
               Services
             </a>
             <a
               href="#gallery"
-              className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
+              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
             >
               Gallery
             </a>
             <a
               href="#about"
-              className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
+              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
             >
               About
             </a>
             <a
               href="#testimonials"
-              className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
+              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
             >
               Reviews
             </a>
             <a
               href="#contact"
-              className="text-sm font-medium hover:text-[#206365] transition-all duration-300 hover:scale-105"
+              className="text-sm font-medium hover:text-blue-600 transition-all duration-300 hover:scale-105"
             >
               Contact
             </a>
@@ -79,11 +79,11 @@ export default function DentalWebsite() {
 
           <div className="flex items-center space-x-2 md:space-x-4">
             <div className="hidden xl:flex items-center space-x-2 text-sm">
-              <Phone className="h-4 w-4 text-[#206365]" />
+              <Phone className="h-4 w-4 text-blue-600" />
               <span className="font-medium">(555) 123-SMILE</span>
             </div>
             <Button
-              className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] transform hover:scale-105 transition-all duration-300 shadow-lg text-xs md:text-sm px-3 md:px-4 py-2"
+              className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg text-xs md:text-sm px-3 md:px-4 py-2"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Book Now
@@ -97,8 +97,8 @@ export default function DentalWebsite() {
         <section className="relative py-20 md:py-32 overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#206365]/5 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#206365]/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
 
           <div className="container px-4 md:px-6 relative">
@@ -106,16 +106,16 @@ export default function DentalWebsite() {
               <div className="animate-fade-in-up text-center lg:text-left">
                 <Badge
                   variant="secondary"
-                  className="mb-4 md:mb-6 bg-[#206365]/10 text-[#206365] border-[#206365]/20 animate-bounce text-xs md:text-sm"
+                  className="mb-4 md:mb-6 bg-blue-600/10 text-blue-600 border-blue-600/20 animate-bounce text-xs md:text-sm"
                 >
                   ✨ Now Accepting New Patients
                 </Badge>
                 <h1
-                  className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-[#206365] animate-fade-in-up delay-200 cursor-pointer hover:scale-105 transition-all duration-300"
+                  className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-blue-600 animate-fade-in-up delay-200 cursor-pointer hover:scale-105 transition-all duration-300"
                   onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Your Perfect
-                  <span className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                     {" "}
                     Smile
                   </span>{" "}
@@ -128,7 +128,7 @@ export default function DentalWebsite() {
                 <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 animate-fade-in-up delay-600 justify-center lg:justify-start">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transform hover:scale-105 transition-all duration-300 shadow-xl"
+                    className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-base md:text-lg px-6 md:px-8 py-4 md:py-6 transform hover:scale-105 transition-all duration-300 shadow-xl"
                     onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                   >
                     <Calendar className="mr-2 h-4 w-4 md:h-5 md:w-5" />
@@ -137,7 +137,7 @@ export default function DentalWebsite() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 border-[#206365] text-[#206365] hover:bg-[#206365]/5 transform hover:scale-105 transition-all duration-300"
+                    className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 border-blue-600 text-blue-600 hover:bg-blue-600/5 transform hover:scale-105 transition-all duration-300"
                   >
                     <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Watch Our Story
@@ -145,18 +145,18 @@ export default function DentalWebsite() {
                 </div>
                 <div className="mt-4 md:mt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-600 animate-fade-in-up delay-800">
                   <div className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-[#206365] mr-2" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mr-2" />
                     Same-day appointments
                   </div>
                   <div className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-[#206365] mr-2" />
+                    <CheckCircle className="h-4 w-4 text-blue-600 mr-2" />
                     Insurance accepted
                   </div>
                 </div>
                 <div className="mt-4 text-center lg:text-left">
                   <button
                     onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                    className="text-[#206365] hover:text-[#1a5557] font-medium text-sm flex items-center justify-center lg:justify-start transition-all duration-300 hover:scale-105"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center justify-center lg:justify-start transition-all duration-300 hover:scale-105"
                   >
                     Learn More About Our Services
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -182,15 +182,15 @@ export default function DentalWebsite() {
                         ))}
                       </div>
                       <div>
-                        <p className="font-semibold text-sm text-[#206365]">4.9/5 Rating</p>
+                        <p className="font-semibold text-sm text-blue-600">4.9/5 Rating</p>
                         <p className="text-xs text-gray-600">500+ Happy Patients</p>
                       </div>
                     </div>
                   </div>
 
                   {/* Floating elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#206365]/20 rounded-full animate-ping"></div>
-                  <div className="absolute top-1/4 -left-8 w-6 h-6 bg-[#206365]/30 rounded-full animate-bounce delay-500"></div>
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-600/20 rounded-full animate-ping"></div>
+                  <div className="absolute top-1/4 -left-8 w-6 h-6 bg-blue-600/30 rounded-full animate-bounce delay-500"></div>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function DentalWebsite() {
                   height={200}
                   className="rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#206365]/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
               </div>
               <div className="relative group">
                 <Image
@@ -217,7 +217,7 @@ export default function DentalWebsite() {
                   height={200}
                   className="rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#206365]/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
               </div>
               <div className="relative group">
                 <Image
@@ -227,7 +227,7 @@ export default function DentalWebsite() {
                   height={200}
                   className="rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#206365]/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
               </div>
               <div className="relative group">
                 <Image
@@ -237,7 +237,7 @@ export default function DentalWebsite() {
                   height={200}
                   className="rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#206365]/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function DentalWebsite() {
           <div className="container px-4 md:px-6 relative">
             <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
               <h2
-                className="text-3xl font-bold tracking-tight sm:text-4xl text-[#206365] mb-4 cursor-pointer hover:scale-105 transition-all duration-300"
+                className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-600 mb-4 cursor-pointer hover:scale-105 transition-all duration-300"
                 onClick={() => document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Comprehensive Dental Services
@@ -267,7 +267,7 @@ export default function DentalWebsite() {
                   title: "General Dentistry",
                   description: "Routine cleanings, fillings, crowns, and preventive care to maintain your oral health.",
                   features: ["Regular cleanings & exams", "Fillings & restorations", "Root canal therapy"],
-                  color: "bg-[#206365]/10 text-[#206365]",
+                  color: "bg-blue-600/10 text-blue-600",
                 },
                 {
                   icon: Star,
@@ -316,7 +316,7 @@ export default function DentalWebsite() {
                     >
                       <service.icon className="h-6 w-6" />
                     </div>
-                    <CardTitle className="text-[#206365] group-hover:text-[#1a5557] transition-colors duration-300">
+                    <CardTitle className="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
@@ -325,7 +325,7 @@ export default function DentalWebsite() {
                     <ul className="space-y-2 text-sm">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-4 w-4 text-[#206365] mr-2" />
+                          <CheckCircle className="h-4 w-4 text-blue-600 mr-2" />
                           {feature}
                         </li>
                       ))}
@@ -338,13 +338,13 @@ export default function DentalWebsite() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-20 bg-gradient-to-br from-[#206365]/5 to-white">
+        <section id="gallery" className="py-20 bg-gradient-to-br from-blue-600/5 to-white">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
               <div className="flex items-center justify-center mb-4">
-                <Camera className="h-8 w-8 text-[#206365] mr-3" />
+                <Camera className="h-8 w-8 text-blue-600 mr-3" />
                 <h2
-                  className="text-3xl font-bold tracking-tight sm:text-4xl text-[#206365] cursor-pointer hover:scale-105 transition-all duration-300"
+                  className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-600 cursor-pointer hover:scale-105 transition-all duration-300"
                   onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Our Work Gallery
@@ -425,7 +425,7 @@ export default function DentalWebsite() {
                           height={150}
                           className="w-full h-32 object-cover"
                         />
-                        <div className="absolute top-2 right-2 bg-[#206365]/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">
+                        <div className="absolute top-2 right-2 bg-blue-600/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded">
                           After
                         </div>
                       </div>
@@ -434,12 +434,12 @@ export default function DentalWebsite() {
                   </div>
                   <CardContent className="p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary" className="bg-[#206365]/10 text-[#206365] text-xs">
+                      <Badge variant="secondary" className="bg-blue-600/10 text-blue-600 text-xs">
                         {item.category}
                       </Badge>
-                      <Sparkles className="h-4 w-4 text-[#206365]" />
+                      <Sparkles className="h-4 w-4 text-blue-600" />
                     </div>
-                    <h3 className="font-semibold text-[#206365] mb-2 group-hover:text-[#1a5557] transition-colors duration-300">
+                    <h3 className="font-semibold text-blue-600 mb-2 group-hover:text-blue-700 transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-sm text-gray-600">{item.description}</p>
@@ -449,7 +449,7 @@ export default function DentalWebsite() {
             </div>
 
             <div className="text-center mt-12 animate-fade-in-up delay-1000">
-              <Button className="bg-gradient-to-r from-[#206365] to-[#2a7a7d] hover:from-[#1a5557] hover:to-[#206365] transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                 View Full Gallery
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -460,15 +460,15 @@ export default function DentalWebsite() {
         {/* About Section */}
         <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-[#206365]/5 rounded-full blur-2xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#206365]/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute top-20 left-20 w-32 h-32 bg-blue-600/5 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-600/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
           </div>
 
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="animate-fade-in-left">
                 <h2
-                  className="text-3xl font-bold tracking-tight sm:text-4xl text-[#206365] mb-6 cursor-pointer hover:scale-105 transition-all duration-300"
+                  className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-600 mb-6 cursor-pointer hover:scale-105 transition-all duration-300"
                   onClick={() => document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth" })}
                 >
                   Meet Dr. Sarah Johnson
@@ -480,11 +480,11 @@ export default function DentalWebsite() {
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2 mb-8">
                   <div className="flex items-center space-x-3 p-4 bg-white/70 backdrop-blur-sm rounded-lg border border-white/30 hover:shadow-lg transition-all duration-300">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#206365]/10">
-                      <Award className="h-6 w-6 text-[#206365]" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600/10">
+                      <Award className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-[#206365]">15+ Years</p>
+                      <p className="font-semibold text-blue-600">15+ Years</p>
                       <p className="text-sm text-gray-600">Experience</p>
                     </div>
                   </div>
@@ -493,7 +493,7 @@ export default function DentalWebsite() {
                       <Users className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-[#206365]">5000+</p>
+                      <p className="font-semibold text-blue-600">5000+</p>
                       <p className="text-sm text-gray-600">Happy Patients</p>
                     </div>
                   </div>
@@ -509,7 +509,7 @@ export default function DentalWebsite() {
                       className="flex items-center animate-fade-in-up"
                       style={{ animationDelay: `${index * 200}ms` }}
                     >
-                      <CheckCircle className="h-5 w-5 text-[#206365] mr-3" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
                       <span>{item}</span>
                     </div>
                   ))}
@@ -527,7 +527,7 @@ export default function DentalWebsite() {
                   {/* Glassmorphism card overlay */}
                   <div className="absolute -bottom-6 -right-6 bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/30 animate-float">
                     <div className="text-center">
-                      <p className="font-bold text-2xl text-[#206365]">4.9★</p>
+                      <p className="font-bold text-2xl text-blue-600">4.9★</p>
                       <p className="text-xs text-gray-600">Patient Rating</p>
                     </div>
                   </div>
@@ -556,11 +556,11 @@ export default function DentalWebsite() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-20 bg-gradient-to-br from-[#206365]/5 to-white">
+        <section id="testimonials" className="py-20 bg-gradient-to-br from-blue-600/5 to-white">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-2xl text-center mb-16 animate-fade-in-up">
               <h2
-                className="text-3xl font-bold tracking-tight sm:text-4xl text-[#206365] cursor-pointer hover:scale-105 transition-all duration-300"
+                className="text-3xl font-bold tracking-tight sm:text-4xl text-blue-600 cursor-pointer hover:scale-105 transition-all duration-300"
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               >
                 What Our Patients Say
@@ -615,10 +615,10 @@ export default function DentalWebsite() {
                         alt={testimonial.name}
                         width={50}
                         height={50}
-                        className="rounded-full mr-4 border-2 border-[#206365]/20"
+                        className="rounded-full mr-4 border-2 border-blue-600/20"
                       />
                       <div>
-                        <div className="font-semibold text-[#206365]">{testimonial.name}</div>
+                        <div className="font-semibold text-blue-600">{testimonial.name}</div>
                         <div className="text-sm text-gray-600">{testimonial.role}</div>
                       </div>
                     </div>
@@ -632,7 +632,7 @@ export default function DentalWebsite() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="py-20 bg-gradient-to-br from-[#206365] to-[#1a5557] text-white relative overflow-hidden"
+          className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
 
@@ -640,7 +640,7 @@ export default function DentalWebsite() {
             <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
               <div className="animate-fade-in-left">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Ready to Schedule Your Visit?</h2>
-                <p className="text-lg text-[#206365]/20 mb-8">
+                <p className="text-lg text-blue-600/20 mb-8">
                   Contact us today to book your appointment or learn more about our services. We're here to help you
                   achieve your best smile!
                 </p>
@@ -666,7 +666,7 @@ export default function DentalWebsite() {
                       </div>
                       <div>
                         <p className="font-semibold">{item.title}</p>
-                        <p className="text-[#206365]/20 whitespace-pre-line">{item.content}</p>
+                        <p className="text-blue-600/20 whitespace-pre-line">{item.content}</p>
                       </div>
                     </div>
                   ))}
@@ -770,7 +770,7 @@ export default function DentalWebsite() {
                     ></textarea>
                   </div>
 
-                  <Button className="w-full bg-white text-[#206365] hover:bg-gray-100 text-lg py-4 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <Button className="w-full bg-white text-blue-600 hover:bg-gray-100 text-lg py-4 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     Schedule Appointment
                     <Calendar className="ml-2 h-5 w-5" />
                   </Button>
@@ -787,7 +787,7 @@ export default function DentalWebsite() {
           <div className="grid gap-8 md:grid-cols-4">
             <div className="animate-fade-in-up">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#206365] to-[#2a7a7d]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-500">
                   <Smile className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -802,7 +802,7 @@ export default function DentalWebsite() {
                   <Link
                     key={index}
                     href="#"
-                    className="text-gray-400 hover:text-[#206365] transition-all duration-300 transform hover:scale-110"
+                    className="text-gray-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
                   >
                     <Icon className="h-5 w-5" />
                   </Link>
@@ -829,7 +829,7 @@ export default function DentalWebsite() {
                 <ul className="space-y-2 text-gray-400">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href="#" className="hover:text-[#206365] transition-colors duration-300">
+                      <Link href="#" className="hover:text-blue-600 transition-colors duration-300">
                         {link}
                       </Link>
                     </li>
@@ -848,7 +848,7 @@ export default function DentalWebsite() {
                 <Link
                   key={index}
                   href="#"
-                  className="text-gray-400 hover:text-[#206365] text-sm transition-colors duration-300"
+                  className="text-gray-400 hover:text-blue-600 text-sm transition-colors duration-300"
                 >
                   {link}
                 </Link>
